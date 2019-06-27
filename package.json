@@ -8,6 +8,9 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
+
+    "format": "prettier --write src/**/*.{js,jsx}",
+    
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,5 +30,8 @@
     "gatsby": "^2.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
   }
 }

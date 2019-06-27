@@ -1,5 +1,7 @@
-# gatsby-from-scratch
+# gatsby from scratch
 Install gatsby from scratch 
+
+
 
 ## Setup
 
@@ -9,4 +11,16 @@ Install gatsby from scratch
 
 ```
 npm i -S gatsby react react-dom
+```
+
+Installing prettier and add format command
+
+```
+npm i -D prettier
+```
+
+Change scripts in `package.json` to include:
+
+```
+"format": "prettier --write src/**/*.{js,jsx}",
 ```
