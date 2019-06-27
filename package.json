@@ -9,9 +9,10 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "_storybook": "NODE_ENV=production start-storybook -p 6006 -s static",
     "storybook": "NODE_ENV=production start-storybook -p 6006 -s static",
-    "build-storybook": "NODE_ENV=production build-storybook -s static"
+    "build-storybook": "NODE_ENV=production build-storybook -s static",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -27,16 +28,16 @@
   },
   "homepage": "https://github.com/RalfWeiss/gatsby-from-scratch#readme",
   "dependencies": {
-    "gatsby": "^2.11.0",
+    "gatsby": "2.7.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
-    "@storybook/addon-actions": "^5.1.9",
-    "@storybook/addon-links": "^5.1.9",
-    "@storybook/addons": "^5.1.9",
-    "@storybook/react": "^5.1.9",
+    "@storybook/addon-actions": "5.0.11",
+    "@storybook/addon-links": "5.0.11",
+    "@storybook/addons": "5.0.11",
+    "@storybook/react": "5.0.11",
     "@testing-library/react": "^8.0.4",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",

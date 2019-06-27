@@ -16,6 +16,7 @@ Install `storybook` using npx:
 
 ```
 npx -p @storybook/cli sb init
+npx -p @storybook/cli@5.0.11 sb init
 ```
 
 According to [Gatsby Visual Testing with Storybook](https://www.gatsbyjs.org/docs/visual-testing-with-storybook/#setting-up-your-environment) we have to update the `.storybook/config.js`.
@@ -41,6 +42,17 @@ to:
 This is differently to the **jest and storybook starter**.
 
 Cannot run Stroybook v5 with Gatsby StaticQuery.
+
+Changed packages:
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/react": "^5.1.9",
+
+    "gatsby": "^2.11.0",
+
+and run npm install
+
 
 ## Setup
 

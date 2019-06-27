@@ -1,5 +1,5 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby from scratch"
+    title: "title from gatsby-config.js"
   }
 }
