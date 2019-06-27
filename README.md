@@ -1,7 +1,15 @@
 # gatsby from scratch
 Install gatsby from scratch 
 
+## Storybook
 
+
+
+Install `storybook` using npx:
+
+```
+npx -p @storybook/cli sb init
+```
 
 ## Setup
 
@@ -13,7 +21,7 @@ Install gatsby from scratch
 npm i -S gatsby react react-dom
 ```
 
-Installing prettier and add format command
+Installing prettier and add `format` command
 
 ```
 npm i -D prettier
