@@ -1,0 +1,31 @@
+{
+  "name": "gatsby-from-scratch",
+  "version": "0.0.1",
+  "description": "Install gatsby from scratch",
+  "main": "index.js",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RalfWeiss/gatsby-from-scratch.git"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "author": "Ralf Weiss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RalfWeiss/gatsby-from-scratch/issues"
+  },
+  "homepage": "https://github.com/RalfWeiss/gatsby-from-scratch#readme",
+  "dependencies": {
+    "gatsby": "^2.11.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
