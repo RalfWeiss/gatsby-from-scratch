@@ -3,7 +3,7 @@ Install gatsby from scratch
 
 ## Storybook
 
-
+According to [Gatsby Visual Testing with Storybook](https://www.gatsbyjs.org/docs/visual-testing-with-storybook/#setting-up-your-environment) we have to update the `.storybook/config.js`.
 
 Install `storybook` using npx:
 
