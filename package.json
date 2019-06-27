@@ -10,7 +10,7 @@
     "serve": "gatsby serve",
     "format": "prettier --write src/**/*.{js,jsx}",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "NODE_ENV=production start-storybook -s static",
+    "storybook": "NODE_ENV=production start-storybook -p 6006 -s static",
     "build-storybook": "NODE_ENV=production build-storybook -s static"    
   },
   "repository": {

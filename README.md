@@ -29,7 +29,9 @@ to:
 }
 ```
 
-This is differently to the **jest and storybook starter**
+This is differently to the **jest and storybook starter**.
+
+Cannot run Stroybook v5 with Gatsby StaticQuery.
 
 ## Setup
 
