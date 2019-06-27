@@ -11,7 +11,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "NODE_ENV=production start-storybook -p 6006 -s static",
-    "build-storybook": "NODE_ENV=production build-storybook -s static"    
+    "build-storybook": "NODE_ENV=production build-storybook -s static"
   },
   "repository": {
     "type": "git",
@@ -37,7 +37,13 @@
     "@storybook/addon-links": "^5.1.9",
     "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",
+    "@testing-library/react": "^8.0.4",
+    "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
-    "prettier": "^1.18.2"
+    "babel-preset-gatsby": "^0.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.8.6"
   }
 }

@@ -1,6 +1,15 @@
 # gatsby from scratch
 Install gatsby from scratch 
 
+## Jest and react-testing-library
+
+```
+npm i -D jest babel-jest react-test-renderer babel-preset-gatsby @testing-library/react identity-obj-proxy
+```
+
+see: [react-testing-library](https://github.com/testing-library/react-testing-library)
+
+
 ## Storybook
 
 Install `storybook` using npx:
