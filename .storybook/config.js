@@ -1,5 +1,29 @@
 import { configure } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { addParameters } from '@storybook/react';
+
+
+const newViewports = {
+  desktop: {
+    name: 'Desktop',
+    styles: {
+      width: '1200px',
+      height: '963px',
+    },
+  },
+  mobile: {
+    name: 'Mobile',
+    styles: {
+      width: '800px',
+      height: '801px',
+    },
+  },
+};
+
+addParameters({
+  viewport: { viewports: newViewports },
+});
+
 
 // Gatsby's Link overrides:
 // Gatsby defines a global called ___loader to prevent its method calls from creating console errors we override it here
@@ -21,3 +45,4 @@ function loadStories() {
 }
 
 configure(loadStories, module)
+

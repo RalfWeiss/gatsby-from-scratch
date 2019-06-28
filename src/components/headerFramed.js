@@ -1,6 +1,9 @@
 import React from 'react'
 import Frame from 'react-frame-component';
 import styled from 'styled-components'
+// import { renderToString } from 'react-dom/server'
+// import { ServerStyleSheet } from 'styled-components'
+
 
 /*
   
@@ -45,6 +48,19 @@ export const StyledContent = styled(Content)`
   color: green;
 `
 
+// this leads to errors
+// const sheet = new ServerStyleSheet()
+/*
+try {
+  const html = renderToString(sheet.collectStyles(<StyledContent />))
+  const styleTags = sheet.getStyleTags() // or sheet.getStyleElement();
+} catch (error) {
+  // handle error
+  console.error(error)
+} finally {
+  sheet.seal()
+}
+*/
 
 // head={styleTag} 
 // <Frame head={<style>{'*{color:red}'}</style>} {...{height, width}} frameBorder={2}>
