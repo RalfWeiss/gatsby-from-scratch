@@ -42,3 +42,11 @@ storiesOf(`Mobile/Header`, module)
 storiesOf(`Responsive/Header`, module)
   .add(`on Desktop`, () => <RespHeader /> , { viewport: { defaultViewport: 'desktop' }})
   .add(`on Mobile`, () => <RespHeader /> , { viewport: { defaultViewport: 'mobile' }})
+  .add(`on Mobile wrapped`, () => (
+    <div>
+      <RespHeader />
+      <div>
+        Content below
+      </div>
+    </div>
+  ), { viewport: { defaultViewport: 'mobile' }})

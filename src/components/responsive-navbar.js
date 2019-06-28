@@ -58,8 +58,16 @@ const HeaderStyled = styled(Header)`
     padding-left: 0;
     display: flex;
     
-    @media(min-width: 800px) {
+    transition:transform 0.3s ease-out; // note that we're transitioning transform, not height!
+    height:auto;
+    transform:scaleY(1); // implicit, but good to specify explicitly
+    transform-origin:top; // keep the top of the element in the same place. this is optional.
+
+
+
+    @media(min-width: 800px) {      
       flex-direction: column;
+      // make the items full width so they wrap in flexbox
       min-width: 100%;
     }
 
@@ -71,10 +79,13 @@ const HeaderStyled = styled(Header)`
 
   > .hidden {
     @media(min-width: 800px) {
-      display: none;
+      // display: none;
+      // height: 0;
+      transform:scaleY(0); // *squish*
     }
     @media(min-width: 992px) {
       display: flex;
+      transform:scaleY(1); // *squish*
     }            
   }  
 
