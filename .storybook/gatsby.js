@@ -20,7 +20,7 @@ module.exports = {
     return {
       site: {
         siteMetadata: {
-          title: "Title from __mocks__"
+          title: "Title from .storybook"
         }
       }
     }
