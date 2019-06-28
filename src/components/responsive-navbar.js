@@ -4,6 +4,13 @@ based on:
 
 for transitioning 
   see: https://css-tricks.com/using-css-transitions-auto-dimensions/
+  https://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-csscs
+
+
+Der Trick dürfte dann sein,
+mit onTransition end die Höhe abzufragen
+und entsprechend dann max-Height zu setzen.
+
 */
 
 import React, { useState } from 'react'
@@ -16,11 +23,18 @@ const links = [
 
 const Header = ({className}) => {
   const [isOpen, setOpen] = useState(false)
+
+  const getHeight = () => {
+    var element = document.getElementById('myList'),
+    style = window.getComputedStyle(element),
+    height = style.getPropertyValue('height');
+    console.log("height: ", height)
+  }
   return (
     <nav {...{className}}>
       <h1>Brandname</h1>
-      <button onClick={() => setOpen(!isOpen)}>HM</button>
-      <ul className={isOpen ? "" : "hidden"} >
+      <button onClick={() => { setOpen(!isOpen); getHeight() } }>HM</button>
+      <ul id="myList" className={isOpen ? "" : "hidden"} >
       {
         links.map((item, idx) => <li key={idx}>{item}</li>)
       }
@@ -57,12 +71,23 @@ const HeaderStyled = styled(Header)`
     list-style-type: none;
     padding-left: 0;
     display: flex;
-    
+    border solid 1px black; 
+
+    // height: auto;
+    overflow: hidden;
+    // je dichter max-height an der tatsächlichen height ist,
+    // desto geschmeidiger wirkt diese transition
+    // da ansonsten der Effekt dieser Transition unsichtbar abläuft
+    max-height: 60px;
+    transition: max-height 2.5s ease-out;
+    // transform-origin:top; // keep the top of the element in the same place. this is optional.
+
+    /*
     transition:transform 0.3s ease-out; // note that we're transitioning transform, not height!
-    height:auto;
+    // height:auto;
     transform:scaleY(1); // implicit, but good to specify explicitly
     transform-origin:top; // keep the top of the element in the same place. this is optional.
-
+    */
 
 
     @media(min-width: 800px) {      
@@ -73,19 +98,22 @@ const HeaderStyled = styled(Header)`
 
     @media(min-width: 992px) {
       flex-direction: row;
-      min-width: 0;
+      // restore with calculation to elements stay together
+      min-width: auto;
     }  
   }
 
   > .hidden {
     @media(min-width: 800px) {
       // display: none;
+      max-height: 0;
       // height: 0;
-      transform:scaleY(0); // *squish*
+      // transform:scaleY(0); // *squish*
+      // transition: max-height 0.5s ease-out;
     }
     @media(min-width: 992px) {
       display: flex;
-      transform:scaleY(1); // *squish*
+      //transform:scaleY(1); // *squish*
     }            
   }  
 
