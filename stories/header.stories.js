@@ -3,6 +3,7 @@ import { storiesOf } from "@storybook/react"
 
 import Header, { PureHeader } from '../src/components/header'
 import RespHeader from '../src/components/responsive-navbar'
+import ReorderHeader from '../src/components/flex-reordering-navbar'
 import HeaderFramed, { StyledContent } from '../src/components/headerFramed'
 
 const data = {
@@ -33,6 +34,10 @@ storiesOf(`Header`, module)
   ))
 
 
+const viewPorts = {
+  desktop: { viewport: { defaultViewport: 'desktop' }},
+  mobile: { viewport: { defaultViewport: 'mobile' }}
+}  
 
 storiesOf(`Mobile/Header`, module)
   .addParameters({ viewport: { defaultViewport: 'mobile' }})
@@ -50,3 +55,21 @@ storiesOf(`Responsive/Header`, module)
       </div>
     </div>
   ), { viewport: { defaultViewport: 'mobile' }})
+
+storiesOf(`Reordered/Header`, module)
+  .add(`on Desktop wrapped`, () => (
+    <div>
+      <ReorderHeader />
+      <div>
+        Content below
+      </div>
+    </div>
+  ), viewPorts.desktop)
+  .add(`on Mobile wrapped`, () => (
+    <div>
+      <ReorderHeader />
+      <div>
+        Content below
+      </div>
+    </div>
+  ), viewPorts.mobile)

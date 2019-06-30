@@ -1,3 +1,9 @@
+/*
+no need to use it just for testing because 
+storybook has a viewport addon 
+
+*/
+
 import React from 'react'
 import Frame from 'react-frame-component';
 import styled from 'styled-components'
