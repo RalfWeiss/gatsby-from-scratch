@@ -87,7 +87,13 @@ export class CssProbe extends Component {
     console.log("componentDidMount: ", JSON.stringify(this.state, 0, 2))
     // if wrapped in setTimeout the transitionEnd gets triggerd
     // setState in componentDidMount is execute synchronous
+    /*
+    Stimmt das?
+    setState is only async batched when it is called inside a React event handler, otherwise it is sync. 
+    Calling setState in setTimeout is therefore sync. I can confirm this behavior from my experience.     
+    */
     // see: https://github.com/facebook/react/issues/12312
+    // see also: https://github.com/facebook/react/issues/11527#issuecomment-360199710
     this.setProbeState('probeStart')
     setTimeout(() => {
       this.setHeight(ProbeValues.probe)

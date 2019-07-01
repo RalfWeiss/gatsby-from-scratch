@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot component 1`] = `
+<Component
+  test="say"
+/>
+`;
+
+exports[`snapshot difference between 2 React components state 1`] = `
+"Snapshot Diff:
+- <Component test=\\"say\\" />
++ <Component test=\\"my name\\" />
+
+  <p>
+-   say
++   my name
+  </p>"
+`;
+
+exports[`snapshot styled component 1`] = `
+<ForwardRef(Styled(Component))
+  test="say"
+/>
+`;
