@@ -96,7 +96,8 @@ test("should object description ", () => {
       [
         expect.objectContaining(
           { 
-            type : "div"
+            type : "div",
+            props: expect.any(Object)
           }
         )
       ]
