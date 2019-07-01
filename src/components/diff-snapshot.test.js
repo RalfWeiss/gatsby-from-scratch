@@ -23,12 +23,14 @@ test("snapshot component", () => {
 });
 
 test("inlineSnapshot styled component", () => {
+  // styled-components beeinflussen die snapshot tests nicht
   expect(<StyledComponent test="say" />).toMatchInlineSnapshot(`
     <ForwardRef(Styled(Component))
       test="say"
     />
   `);
 });
+
 
 test("snapshot styled component", () => {
   expect(<StyledComponent test="say" />).toMatchSnapshot();
