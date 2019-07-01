@@ -1,0 +1,57 @@
+{
+  "name": "gatsby-from-scratch",
+  "version": "0.0.1",
+  "description": "Install gatsby from scratch",
+  "main": "index.js",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "_storybook": "NODE_ENV=production start-storybook -p 6006 -s static",
+    "storybook": "NODE_ENV=production start-storybook -p 6006 -s static",
+    "build-storybook": "NODE_ENV=production build-storybook -s static",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RalfWeiss/gatsby-from-scratch.git"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "author": "Ralf Weiss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RalfWeiss/gatsby-from-scratch/issues"
+  },
+  "homepage": "https://github.com/RalfWeiss/gatsby-from-scratch#readme",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.4",
+    "gatsby": "2.7.5",
+    "gatsby-plugin-styled-components": "^3.1.0",
+    "ramda": "^0.26.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-frame-component": "^4.1.0",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@storybook/addon-actions": "5.1.9",
+    "@storybook/addon-links": "5.1.9",
+    "@storybook/addon-viewport": "^5.1.9",
+    "@storybook/addons": "5.1.9",
+    "@storybook/react": "5.1.9",
+    "@testing-library/react": "^8.0.4",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "babel-preset-gatsby": "^0.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.8.6",
+    "snapshot-diff": "^0.5.1"
+  }
+}
